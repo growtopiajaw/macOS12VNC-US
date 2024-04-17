@@ -9,9 +9,5 @@ jobs:
   build:
     runs-on: macos-14
     steps:
-    - uses: actions/checkout@v2
-    - name: Setting the environment up.
-      run: |
-        yes 'password' | sudo passwd runner
-        brew install cloudflared
-        sudo cloudflared tunnel --url ssh://localhost:22
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
