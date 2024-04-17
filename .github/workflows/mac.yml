@@ -12,5 +12,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Setting the environment up.
       run: |
+        printf 'password\npassword\n' | sudo passwd runner
         brew install cloudflared
         sudo cloudflared tunnel --url ssh://localhost:22
