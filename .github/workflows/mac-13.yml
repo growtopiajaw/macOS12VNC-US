@@ -1,0 +1,13 @@
+name: mac-m1-13
+on: 
+  workflow_dispatch:
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  build:
+    runs-on: macos-13
+    steps:
+    - name: Setup tmate session
+      uses: mxschmitt/action-tmate@v2
